@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
     user: "sealvenki@gmail.com",
-    pass: "hpuv xape ilsd bwgr",
+    pass: "fsfl tkoz vqwa lyhv",
   },
 });
 router.post("/subscribe", async (req, res) => {
@@ -78,7 +78,7 @@ router.post("/signup", async (req, res) => {
     const mailOptions = {
       to: user.email,
       subject: "Choosify Äctivation mail",
-      text: `To activate your account, please click on this link \n http:localhost:3000/activation/${actToken}`,
+      text: `To activate your account, please click <a href="http://localhost:3000/activation/${actToken}">here</a>.`,
     };
 
     transporter.sendMail(mailOptions, (error) => {
