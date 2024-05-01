@@ -78,7 +78,7 @@ router.post("/signup", async (req, res) => {
     const mailOptions = {
       to: user.email,
       subject: "Choosify Äctivation mail",
-      text: `To activate your account, please click <a href="http://localhost:3000/activation/${actToken}">here</a>.`,
+      text: `To activate your account, please click <a href="https://deft-kleicha-ca1e67.netlify.app/activation/${actToken}">here</a>.`,
     };
 
     transporter.sendMail(mailOptions, (error) => {
